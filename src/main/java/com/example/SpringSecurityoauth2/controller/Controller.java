@@ -18,16 +18,16 @@ public class Controller {
     private final UserService userService;
 
     @GetMapping("/user")
-    public String userPage(@AuthenticationPrincipal OAuth2User principal, Model model) {
-        model.addAttribute("name", principal.getAttribute("name"));
-        model.addAttribute("email", principal.getAttribute("email"));
+    public String userPage() {
+        /*model.addAttribute("name", principal.getAttribute("name"));
+        model.addAttribute("email", principal.getAttribute("email"));*/
         return "user";
     }
 
     @GetMapping("/admin")
-    public String adminPage(@AuthenticationPrincipal OAuth2User principal, Model model) {
-        model.addAttribute("name", principal.getAttribute("name"));
-        model.addAttribute("email", principal.getAttribute("email"));
+    public String adminPage() {
+        /*model.addAttribute("name", principal.getAttribute("name"));
+        model.addAttribute("email", principal.getAttribute("email"));*/
         return "admin";
     }
 

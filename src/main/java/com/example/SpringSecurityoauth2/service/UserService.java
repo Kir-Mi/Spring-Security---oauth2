@@ -19,7 +19,7 @@ public class UserService {
     }
 
     public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return userRepository.findByName(username);
     }
 
     public Optional<User> findByEmail(String email) {
@@ -27,7 +27,7 @@ public class UserService {
     }
 
     public void save(User user) {
-        log.info("User " + user.getUsername() + " with role: " + user.getRole() + " was created");
+        log.info("User " + user.getName() + " with role: " + user.getRole() + " was created");
         userRepository.save(user);
     }
 }
